@@ -1,0 +1,30 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local OldNameCall = nil
+
+local sexy = ReplicatedStorage.RemoteEvents.ReportTimer
+
+OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+   local Args = {...}
+   local NamecallMethod = getnamecallmethod()
+
+   if not checkcaller() and Self == sexy and NamecallMethod == "FireServer"then
+       return OldNameCall(Self, 420.69)
+   end
+
+   return OldNameCall(Self, ...)
+end)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local OldNameCall = nil
+
+local sexy = ReplicatedStorage.RemoteEvents.ReportTimer
+
+OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+   local Args = {...}
+   local NamecallMethod = getnamecallmethod()
+
+   if not checkcaller() and Self == sexy and NamecallMethod == "FireServer"then
+       return OldNameCall(Self, 420.69)
+   end
+
+   return OldNameCall(Self, ...)
+end)
