@@ -15,3 +15,5 @@ task.wait(2)
 local args = {[1] = 150.25794509999832}
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("ReportTimer"):FireServer(unpack(args))
 game.Players.LocalPlayer.HumanoidRootPart.CFrame = CFrame.new(106.895607, -3.50888562, -13634.6328, 0.949373186, -8.35310144e-18, 0.314150631, 7.51175949e-18, 1, 3.8887022e-18, -0.314150631, -1.33200605e-18, 0.949373186)
+wait(1)
+game:GetService'TeleportService':TeleportToPlaceInstance(game.PlaceId,game.JobId,game:GetService'Players'.LocalPlayer)
